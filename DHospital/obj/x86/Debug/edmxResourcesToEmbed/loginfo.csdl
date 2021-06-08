@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="loginfoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="loginfohEntities">
+    <EntitySet Name="ACTIVATEs" EntityType="loginfoModel.ACTIVATE" />
+    <EntitySet Name="FEATUREs" EntityType="loginfoModel.FEATURE" />
+    <EntitySet Name="FIRMINFOes" EntityType="loginfoModel.FIRMINFO" />
+    <EntitySet Name="POWERs" EntityType="loginfoModel.POWER" />
+    <EntitySet Name="SOFTWARENAMEs" EntityType="loginfoModel.SOFTWARENAME" />
+    <EntitySet Name="USERINFOes" EntityType="loginfoModel.USERINFO" />
+    <EntitySet Name="USERWCOMPANies" EntityType="loginfoModel.USERWCOMPANY" />
+  </EntityContainer>
+  <EntityType Name="ACTIVATE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Column" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Value" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="DisplayToUser" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FEATURE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Features" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FIRMINFO">
+    <Key>
+      <PropertyRef Name="Firm_name" />
+      <PropertyRef Name="Firm_Period_name" />
+    </Key>
+    <Property Name="F_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firm_name" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Firm_Period_name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Firm_database" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Firm_odate" Type="DateTime" />
+    <Property Name="Firm_edate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="POWER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Power1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOFTWARENAME">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Value" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USERINFO">
+    <Key>
+      <PropertyRef Name="UName" />
+    </Key>
+    <Property Name="U_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Upass" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Utype" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Upass2" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="USERWCOMPANY">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="F_id" Type="Int32" />
+    <Property Name="U_id" Type="Int32" />
+  </EntityType>
+</Schema>

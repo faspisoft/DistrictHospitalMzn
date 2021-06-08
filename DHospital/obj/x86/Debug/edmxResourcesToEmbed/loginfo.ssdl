@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="loginfoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="loginfoModelStoreContainer">
+    <EntitySet Name="ACTIVATE" EntityType="loginfoModel.Store.ACTIVATE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FEATURE" EntityType="loginfoModel.Store.FEATURE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FIRMINFO" EntityType="loginfoModel.Store.FIRMINFO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="POWER" EntityType="loginfoModel.Store.POWER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SOFTWARENAME" EntityType="loginfoModel.Store.SOFTWARENAME" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USERINFO" EntityType="loginfoModel.Store.USERINFO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USERWCOMPANY" EntityType="loginfoModel.Store.USERWCOMPANY" store:Type="Tables" store:Schema="dbo" store:Name="USERWCOMPANY">
+      <DefiningQuery>SELECT 
+      [USERWCOMPANY].[Id] AS [Id], 
+      [USERWCOMPANY].[F_id] AS [F_id], 
+      [USERWCOMPANY].[U_id] AS [U_id]
+      FROM [dbo].[USERWCOMPANY] AS [USERWCOMPANY]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="ACTIVATE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Column" Type="nvarchar" MaxLength="255" />
+    <Property Name="Value" Type="nvarchar" MaxLength="255" />
+    <Property Name="DisplayToUser" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FEATURE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Features" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FIRMINFO">
+    <Key>
+      <PropertyRef Name="Firm_name" />
+      <PropertyRef Name="Firm_Period_name" />
+    </Key>
+    <Property Name="F_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Firm_name" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="Firm_Period_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Firm_database" Type="nvarchar" MaxLength="50" />
+    <Property Name="Firm_odate" Type="datetime" />
+    <Property Name="Firm_edate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="POWER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Power" Type="nvarchar" MaxLength="255" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOFTWARENAME">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Value" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USERINFO">
+    <Key>
+      <PropertyRef Name="UName" />
+    </Key>
+    <Property Name="U_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Upass" Type="nvarchar" MaxLength="50" />
+    <Property Name="Utype" Type="nvarchar" MaxLength="50" />
+    <Property Name="Upass2" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'loginfoh.dbo.USERWCOMPANY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="USERWCOMPANY">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="F_id" Type="int" />
+    <Property Name="U_id" Type="int" />
+  </EntityType>
+</Schema>

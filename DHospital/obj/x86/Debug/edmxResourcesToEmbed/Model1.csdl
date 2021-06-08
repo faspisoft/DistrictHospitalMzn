@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabasehModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="DatabasehEntities">
+    <EntitySet Name="ACCOUNTs" EntityType="DatabasehModel.ACCOUNT" />
+    <EntitySet Name="COMPANies" EntityType="DatabasehModel.COMPANY" />
+    <EntitySet Name="logs" EntityType="DatabasehModel.log" />
+  </EntityContainer>
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="pat_id" />
+    </Key>
+    <Property Name="Ac_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pat_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="number" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="sex" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="age" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="rdate" Type="DateTime" />
+    <Property Name="address" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="pay" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="other" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="message" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="rtime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="COMPANY">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Firm_Period_name" />
+    </Key>
+    <Property Name="C_id" Type="Int32" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Firm_Period_name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Start_from" Type="DateTime" />
+    <Property Name="End_at" Type="DateTime" />
+    <Property Name="Cst_no" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Tin_no" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Contactno" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Regno" />
+    <Property Type="DateTime" Name="rdate" />
+    <Property Type="String" Name="rtime" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="oldname" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="newname" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

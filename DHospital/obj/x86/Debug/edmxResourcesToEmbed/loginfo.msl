@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="loginfoModelStoreContainer" CdmEntityContainer="loginfohEntities">
+    <EntitySetMapping Name="ACTIVATEs">
+      <EntityTypeMapping TypeName="loginfoModel.ACTIVATE">
+        <MappingFragment StoreEntitySet="ACTIVATE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Column" ColumnName="Column" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="DisplayToUser" ColumnName="DisplayToUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FEATUREs">
+      <EntityTypeMapping TypeName="loginfoModel.FEATURE">
+        <MappingFragment StoreEntitySet="FEATURE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIRMINFOes">
+      <EntityTypeMapping TypeName="loginfoModel.FIRMINFO">
+        <MappingFragment StoreEntitySet="FIRMINFO">
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="Firm_name" ColumnName="Firm_name" />
+          <ScalarProperty Name="Firm_Period_name" ColumnName="Firm_Period_name" />
+          <ScalarProperty Name="Firm_database" ColumnName="Firm_database" />
+          <ScalarProperty Name="Firm_odate" ColumnName="Firm_odate" />
+          <ScalarProperty Name="Firm_edate" ColumnName="Firm_edate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POWERs">
+      <EntityTypeMapping TypeName="loginfoModel.POWER">
+        <MappingFragment StoreEntitySet="POWER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Power1" ColumnName="Power" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOFTWARENAMEs">
+      <EntityTypeMapping TypeName="loginfoModel.SOFTWARENAME">
+        <MappingFragment StoreEntitySet="SOFTWARENAME">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERINFOes">
+      <EntityTypeMapping TypeName="loginfoModel.USERINFO">
+        <MappingFragment StoreEntitySet="USERINFO">
+          <ScalarProperty Name="U_id" ColumnName="U_id" />
+          <ScalarProperty Name="UName" ColumnName="UName" />
+          <ScalarProperty Name="Upass" ColumnName="Upass" />
+          <ScalarProperty Name="Utype" ColumnName="Utype" />
+          <ScalarProperty Name="Upass2" ColumnName="Upass2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERWCOMPANies">
+      <EntityTypeMapping TypeName="loginfoModel.USERWCOMPANY">
+        <MappingFragment StoreEntitySet="USERWCOMPANY">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="F_id" ColumnName="F_id" />
+          <ScalarProperty Name="U_id" ColumnName="U_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

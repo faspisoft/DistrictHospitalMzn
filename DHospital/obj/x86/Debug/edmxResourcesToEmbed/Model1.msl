@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="DatabasehModelStoreContainer" CdmEntityContainer="DatabasehEntities">
+    <EntitySetMapping Name="ACCOUNTs">
+      <EntityTypeMapping TypeName="DatabasehModel.ACCOUNT">
+        <MappingFragment StoreEntitySet="ACCOUNT">
+          <ScalarProperty Name="Ac_id" ColumnName="Ac_id" />
+          <ScalarProperty Name="pat_id" ColumnName="pat_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="rdate" ColumnName="rdate" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="pay" ColumnName="pay" />
+          <ScalarProperty Name="other" ColumnName="other" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="rtime" ColumnName="rtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPANies">
+      <EntityTypeMapping TypeName="DatabasehModel.COMPANY">
+        <MappingFragment StoreEntitySet="COMPANY">
+          <ScalarProperty Name="C_id" ColumnName="C_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Firm_Period_name" ColumnName="Firm_Period_name" />
+          <ScalarProperty Name="Start_from" ColumnName="Start_from" />
+          <ScalarProperty Name="End_at" ColumnName="End_at" />
+          <ScalarProperty Name="Cst_no" ColumnName="Cst_no" />
+          <ScalarProperty Name="Tin_no" ColumnName="Tin_no" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logs">
+      <EntityTypeMapping TypeName="DatabasehModel.log">
+        <MappingFragment StoreEntitySet="log">
+          <ScalarProperty Name="newname" ColumnName="newname" />
+          <ScalarProperty Name="oldname" ColumnName="oldname" />
+          <ScalarProperty Name="rtime" ColumnName="rtime" />
+          <ScalarProperty Name="rdate" ColumnName="rdate" />
+          <ScalarProperty Name="Regno" ColumnName="Regno" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

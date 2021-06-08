@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabasehModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="DatabasehModelStoreContainer">
+    <EntitySet Name="ACCOUNT" EntityType="DatabasehModel.Store.ACCOUNT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPANY" EntityType="DatabasehModel.Store.COMPANY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="log" EntityType="DatabasehModel.Store.log" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="pat_id" />
+    </Key>
+    <Property Name="Ac_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="pat_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="number" Type="nvarchar" MaxLength="50" />
+    <Property Name="sex" Type="nvarchar" MaxLength="50" />
+    <Property Name="age" Type="nvarchar" MaxLength="50" />
+    <Property Name="rdate" Type="datetime" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="pay" Type="nvarchar" MaxLength="50" />
+    <Property Name="other" Type="nvarchar(max)" />
+    <Property Name="message" Type="nvarchar(max)" />
+    <Property Name="rtime" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="COMPANY">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Firm_Period_name" />
+    </Key>
+    <Property Name="C_id" Type="int" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Firm_Period_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Start_from" Type="datetime" />
+    <Property Name="End_at" Type="datetime" />
+    <Property Name="Cst_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tin_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contactno" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Regno" Type="int" />
+    <Property Name="rdate" Type="datetime" />
+    <Property Name="rtime" Type="nvarchar" MaxLength="255" />
+    <Property Name="oldname" Type="nvarchar" MaxLength="255" />
+    <Property Name="newname" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+</Schema>
